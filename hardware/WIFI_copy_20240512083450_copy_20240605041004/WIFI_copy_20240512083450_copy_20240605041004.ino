@@ -1,5 +1,6 @@
 #include "DHT.h" // DHT 라이브러리 호출
-
+#include <SoftwareSerial.h>
+SoftwareSerial BT (9, 7);
 #define DHTPIN 12 // 온습도 센서가 12번에 연결
 #define DHTTYPE DHT11 
 
@@ -7,6 +8,7 @@ DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
   pinMode(8, OUTPUT);
+  BT.begin(9600); 
   Serial.begin(9600); // 시리얼 통신 시작
   dht.begin();
 }

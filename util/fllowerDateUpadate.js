@@ -25,7 +25,7 @@ const updateFlowerData = () => {
 
   updateData(); // 처음 한 번 즉시 실행
 
-  setInterval(updateData, 18000); // 3분마다 실행
+  setInterval(updateData, 18000);   // 3분마다 실행
 };
 
 module.exports = updateFlowerData;
